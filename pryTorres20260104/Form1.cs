@@ -11,7 +11,17 @@ using System.Windows.Forms;
 namespace pryTorres20260104
 {
     public partial class frmNegocio : Form
+
     {
+        //DECLARACION DE VARIABLES GLOBALES
+        string varCodigo = "";
+        string varNombre = "";
+        string varCantidad = "";
+        int varPrecio = 0;
+        int varStock = 0;
+        
+
+
         public frmNegocio()
         {
             InitializeComponent();
@@ -36,5 +46,34 @@ namespace pryTorres20260104
         {
 
         }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+           //desde interfaz gráfica
+
+            lblRegistro.Text = tbCodigo.Text + '┆' + tbNombre.Text + '┆' + mtbPrecio.Text + '┆' + mtbCantidad.Text + '┆' + mtbStock.Text;
+
+            //pasar los datos a variable y luego mostrarlo
+            varCodigo = tbCodigo.Text;
+            varNombre = tbNombre.Text;
+            //usando el tipo de dato para parsear
+            varPrecio = int.Parse(mtbPrecio.Text);
+            varCantidad = mtbCantidad.Text;
+            //usando .net para convertir
+            varStock = Convert.ToInt32(mtbStock.Text); 
+
+            lblRegistroDos.Text = varCodigo + " " + varPrecio.ToString() + " " + varStock.ToString() + " " + varCantidad;
+
+
+            string datoAgregado = varCodigo + " " + varPrecio.ToString() + " " + varStock.ToString() + " " + varCantidad;
+
+            MessageBox.Show(datoAgregado);
+            //cuando haga click en aceptar "limpiar" la pantalla para
+            //registrar un nuevo producto
+
+            //agregar un botón INVENTARIO
+        
+        }
+        
     }
 }
