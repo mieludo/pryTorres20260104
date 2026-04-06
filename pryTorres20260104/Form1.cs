@@ -31,5 +31,10 @@ namespace pryTorres20260104
         {
 
         }
+
+        private void cboCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
