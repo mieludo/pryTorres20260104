@@ -30,14 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNegocio));
             this.gbInventario = new System.Windows.Forms.GroupBox();
+            this.lblRegistroDos = new System.Windows.Forms.Label();
             this.lblRegistro = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.mtbStock = new System.Windows.Forms.MaskedTextBox();
             this.lblStock = new System.Windows.Forms.Label();
-            this.tbNombre = new System.Windows.Forms.TextBox();
+            this.tboNombre = new System.Windows.Forms.TextBox();
             this.mtbCantidad = new System.Windows.Forms.MaskedTextBox();
             this.mtbPrecio = new System.Windows.Forms.MaskedTextBox();
-            this.tbCodigo = new System.Windows.Forms.TextBox();
+            this.tboCodigo = new System.Windows.Forms.TextBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.lblCantidad = new System.Windows.Forms.Label();
@@ -46,21 +47,24 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblInventario = new System.Windows.Forms.Label();
-            this.lblRegistroDos = new System.Windows.Forms.Label();
+            this.lblDescripción = new System.Windows.Forms.Label();
+            this.tboDescripción = new System.Windows.Forms.TextBox();
             this.gbInventario.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbInventario
             // 
+            this.gbInventario.Controls.Add(this.tboDescripción);
+            this.gbInventario.Controls.Add(this.lblDescripción);
             this.gbInventario.Controls.Add(this.lblRegistroDos);
             this.gbInventario.Controls.Add(this.lblRegistro);
             this.gbInventario.Controls.Add(this.btnCancelar);
             this.gbInventario.Controls.Add(this.mtbStock);
             this.gbInventario.Controls.Add(this.lblStock);
-            this.gbInventario.Controls.Add(this.tbNombre);
+            this.gbInventario.Controls.Add(this.tboNombre);
             this.gbInventario.Controls.Add(this.mtbCantidad);
             this.gbInventario.Controls.Add(this.mtbPrecio);
-            this.gbInventario.Controls.Add(this.tbCodigo);
+            this.gbInventario.Controls.Add(this.tboCodigo);
             this.gbInventario.Controls.Add(this.btnConfirmar);
             this.gbInventario.Controls.Add(this.cboCategoria);
             this.gbInventario.Controls.Add(this.lblCantidad);
@@ -68,35 +72,44 @@
             this.gbInventario.Controls.Add(this.lblPrecio);
             this.gbInventario.Controls.Add(this.lblNombre);
             this.gbInventario.Controls.Add(this.lblCodigo);
-            this.gbInventario.Location = new System.Drawing.Point(71, 63);
+            this.gbInventario.Location = new System.Drawing.Point(71, 32);
             this.gbInventario.Name = "gbInventario";
-            this.gbInventario.Size = new System.Drawing.Size(391, 496);
+            this.gbInventario.Size = new System.Drawing.Size(440, 527);
             this.gbInventario.TabIndex = 1;
             this.gbInventario.TabStop = false;
             this.gbInventario.Enter += new System.EventHandler(this.gbInventario_Enter);
+            // 
+            // lblRegistroDos
+            // 
+            this.lblRegistroDos.AutoSize = true;
+            this.lblRegistroDos.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistroDos.Location = new System.Drawing.Point(84, 428);
+            this.lblRegistroDos.Name = "lblRegistroDos";
+            this.lblRegistroDos.Size = new System.Drawing.Size(0, 17);
+            this.lblRegistroDos.TabIndex = 8;
             // 
             // lblRegistro
             // 
             this.lblRegistro.AutoSize = true;
             this.lblRegistro.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistro.Location = new System.Drawing.Point(96, 356);
+            this.lblRegistro.Location = new System.Drawing.Point(73, 386);
             this.lblRegistro.Name = "lblRegistro";
             this.lblRegistro.Size = new System.Drawing.Size(0, 17);
             this.lblRegistro.TabIndex = 3;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(76, 455);
+            this.btnCancelar.Location = new System.Drawing.Point(100, 489);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(119, 23);
-            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // mtbStock
             // 
-            this.mtbStock.Location = new System.Drawing.Point(111, 247);
-            this.mtbStock.Mask = "99999";
+            this.mtbStock.Location = new System.Drawing.Point(200, 202);
+            this.mtbStock.Mask = "9999";
             this.mtbStock.Name = "mtbStock";
             this.mtbStock.Size = new System.Drawing.Size(121, 20);
             this.mtbStock.TabIndex = 4;
@@ -105,44 +118,44 @@
             // 
             this.lblStock.AutoSize = true;
             this.lblStock.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStock.Location = new System.Drawing.Point(20, 244);
+            this.lblStock.Location = new System.Drawing.Point(96, 202);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(49, 20);
             this.lblStock.TabIndex = 6;
             this.lblStock.Text = "Stock:";
             // 
-            // tbNombre
+            // tboNombre
             // 
-            this.tbNombre.Location = new System.Drawing.Point(111, 90);
-            this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(121, 20);
-            this.tbNombre.TabIndex = 1;
+            this.tboNombre.Location = new System.Drawing.Point(200, 68);
+            this.tboNombre.Name = "tboNombre";
+            this.tboNombre.Size = new System.Drawing.Size(121, 20);
+            this.tboNombre.TabIndex = 1;
             // 
             // mtbCantidad
             // 
-            this.mtbCantidad.Location = new System.Drawing.Point(111, 194);
+            this.mtbCantidad.Location = new System.Drawing.Point(200, 157);
             this.mtbCantidad.Name = "mtbCantidad";
             this.mtbCantidad.Size = new System.Drawing.Size(121, 20);
             this.mtbCantidad.TabIndex = 3;
             // 
             // mtbPrecio
             // 
-            this.mtbPrecio.Location = new System.Drawing.Point(110, 137);
-            this.mtbPrecio.Mask = "99999";
+            this.mtbPrecio.Location = new System.Drawing.Point(200, 114);
+            this.mtbPrecio.Mask = "9999999";
             this.mtbPrecio.Name = "mtbPrecio";
             this.mtbPrecio.Size = new System.Drawing.Size(121, 20);
             this.mtbPrecio.TabIndex = 2;
             // 
-            // tbCodigo
+            // tboCodigo
             // 
-            this.tbCodigo.Location = new System.Drawing.Point(110, 29);
-            this.tbCodigo.Name = "tbCodigo";
-            this.tbCodigo.Size = new System.Drawing.Size(122, 20);
-            this.tbCodigo.TabIndex = 0;
+            this.tboCodigo.Location = new System.Drawing.Point(201, 25);
+            this.tboCodigo.Name = "tboCodigo";
+            this.tboCodigo.Size = new System.Drawing.Size(122, 20);
+            this.tboCodigo.TabIndex = 0;
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(214, 455);
+            this.btnConfirmar.Location = new System.Drawing.Point(238, 489);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(119, 23);
             this.btnConfirmar.TabIndex = 7;
@@ -160,7 +173,7 @@
             "Mousepad",
             "Gabinete",
             "Ram"});
-            this.cboCategoria.Location = new System.Drawing.Point(111, 303);
+            this.cboCategoria.Location = new System.Drawing.Point(200, 242);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(121, 21);
             this.cboCategoria.TabIndex = 5;
@@ -170,7 +183,7 @@
             // 
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidad.Location = new System.Drawing.Point(20, 191);
+            this.lblCantidad.Location = new System.Drawing.Point(96, 157);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(70, 20);
             this.lblCantidad.TabIndex = 4;
@@ -180,7 +193,7 @@
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(20, 304);
+            this.lblCategoria.Location = new System.Drawing.Point(96, 243);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(76, 20);
             this.lblCategoria.TabIndex = 3;
@@ -190,7 +203,7 @@
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(20, 137);
+            this.lblPrecio.Location = new System.Drawing.Point(96, 114);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(75, 20);
             this.lblPrecio.TabIndex = 2;
@@ -200,7 +213,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(20, 87);
+            this.lblNombre.Location = new System.Drawing.Point(96, 68);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(63, 20);
             this.lblNombre.TabIndex = 1;
@@ -210,7 +223,7 @@
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(21, 29);
+            this.lblCodigo.Location = new System.Drawing.Point(96, 25);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(57, 20);
             this.lblCodigo.TabIndex = 0;
@@ -221,27 +234,37 @@
             this.lblInventario.AutoSize = true;
             this.lblInventario.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblInventario.Location = new System.Drawing.Point(176, 18);
+            this.lblInventario.Location = new System.Drawing.Point(230, 9);
             this.lblInventario.Name = "lblInventario";
             this.lblInventario.Size = new System.Drawing.Size(131, 26);
             this.lblInventario.TabIndex = 2;
             this.lblInventario.Text = "Inventario 📝";
             // 
-            // lblRegistroDos
+            // lblDescripción
             // 
-            this.lblRegistroDos.AutoSize = true;
-            this.lblRegistroDos.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistroDos.Location = new System.Drawing.Point(107, 398);
-            this.lblRegistroDos.Name = "lblRegistroDos";
-            this.lblRegistroDos.Size = new System.Drawing.Size(0, 17);
-            this.lblRegistroDos.TabIndex = 8;
+            this.lblDescripción.AutoSize = true;
+            this.lblDescripción.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripción.Location = new System.Drawing.Point(96, 291);
+            this.lblDescripción.Name = "lblDescripción";
+            this.lblDescripción.Size = new System.Drawing.Size(91, 20);
+            this.lblDescripción.TabIndex = 9;
+            this.lblDescripción.Text = "Descripción:";
+            // 
+            // tboDescripción
+            // 
+            this.tboDescripción.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboDescripción.Location = new System.Drawing.Point(201, 290);
+            this.tboDescripción.Multiline = true;
+            this.tboDescripción.Name = "tboDescripción";
+            this.tboDescripción.Size = new System.Drawing.Size(120, 74);
+            this.tboDescripción.TabIndex = 6;
             // 
             // frmNegocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(562, 581);
+            this.ClientSize = new System.Drawing.Size(565, 581);
             this.Controls.Add(this.lblInventario);
             this.Controls.Add(this.gbInventario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -263,9 +286,9 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.ComboBox cboCategoria;
-        private System.Windows.Forms.TextBox tbCodigo;
+        private System.Windows.Forms.TextBox tboCodigo;
         private System.Windows.Forms.Button btnConfirmar;
-        private System.Windows.Forms.TextBox tbNombre;
+        private System.Windows.Forms.TextBox tboNombre;
         private System.Windows.Forms.MaskedTextBox mtbCantidad;
         private System.Windows.Forms.MaskedTextBox mtbPrecio;
         private System.Windows.Forms.MaskedTextBox mtbStock;
@@ -274,6 +297,8 @@
         private System.Windows.Forms.Label lblInventario;
         private System.Windows.Forms.Label lblRegistro;
         private System.Windows.Forms.Label lblRegistroDos;
+        private System.Windows.Forms.Label lblDescripción;
+        private System.Windows.Forms.TextBox tboDescripción;
     }
 }
 
