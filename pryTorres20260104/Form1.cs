@@ -75,7 +75,6 @@ namespace pryTorres20260104
             //cuando haga click en confirmar "limpiar" la pantalla para
             //registrar un nuevo producto
 
-            //agregar un botón INVENTARIO
         
         }
         
