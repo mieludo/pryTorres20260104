@@ -48,13 +48,13 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblInventario = new System.Windows.Forms.Label();
             this.lblDescripción = new System.Windows.Forms.Label();
-            this.tboDescripción = new System.Windows.Forms.TextBox();
+            this.tboDescripcion = new System.Windows.Forms.TextBox();
             this.gbInventario.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbInventario
             // 
-            this.gbInventario.Controls.Add(this.tboDescripción);
+            this.gbInventario.Controls.Add(this.tboDescripcion);
             this.gbInventario.Controls.Add(this.lblDescripción);
             this.gbInventario.Controls.Add(this.lblRegistroDos);
             this.gbInventario.Controls.Add(this.lblRegistro);
@@ -250,21 +250,21 @@
             this.lblDescripción.TabIndex = 9;
             this.lblDescripción.Text = "Descripción:";
             // 
-            // tboDescripción
+            // tboDescripcion
             // 
-            this.tboDescripción.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboDescripción.Location = new System.Drawing.Point(201, 290);
-            this.tboDescripción.Multiline = true;
-            this.tboDescripción.Name = "tboDescripción";
-            this.tboDescripción.Size = new System.Drawing.Size(120, 74);
-            this.tboDescripción.TabIndex = 6;
+            this.tboDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboDescripcion.Location = new System.Drawing.Point(201, 290);
+            this.tboDescripcion.Multiline = true;
+            this.tboDescripcion.Name = "tboDescripcion";
+            this.tboDescripcion.Size = new System.Drawing.Size(120, 74);
+            this.tboDescripcion.TabIndex = 6;
             // 
             // frmNegocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(565, 581);
+            this.ClientSize = new System.Drawing.Size(583, 581);
             this.Controls.Add(this.lblInventario);
             this.Controls.Add(this.gbInventario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -298,7 +298,7 @@
         private System.Windows.Forms.Label lblRegistro;
         private System.Windows.Forms.Label lblRegistroDos;
         private System.Windows.Forms.Label lblDescripción;
-        private System.Windows.Forms.TextBox tboDescripción;
+        private System.Windows.Forms.TextBox tboDescripcion;
     }
 }
 

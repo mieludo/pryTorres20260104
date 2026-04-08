@@ -51,14 +51,16 @@ namespace pryTorres20260104
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-           //desde interfaz gráfica
+           
+            
+            //desde interfaz gráfica
 
-            lblRegistro.Text = tboCodigo.Text + '┆' + tboNombre.Text + '┆' + mtbPrecio.Text + '┆' + mtbCantidad.Text + '┆' + mtbStock.Text + '┆' + cboCategoria.Text + '┆' + tboDescripción.Text;
+            lblRegistro.Text = tboCodigo.Text + '┆' + tboNombre.Text + '┆' + mtbPrecio.Text + '┆' + mtbCantidad.Text + '┆' + mtbStock.Text + '┆' + cboCategoria.Text + '┆' + tboDescripcion.Text;
 
             //pasar los datos a variable y luego mostrarlo
             varCodigo = tboCodigo.Text;
             varNombre = tboNombre.Text;
-            varDescripcion = tboDescripción.Text;
+            varDescripcion = tboDescripcion.Text;
             varCategoria = cboCategoria.Text;
             //usando el tipo de dato para parsear
             varPrecio = int.Parse(mtbPrecio.Text);
@@ -75,8 +77,13 @@ namespace pryTorres20260104
             //cuando haga click en confirmar "limpiar" la pantalla para
             //registrar un nuevo producto
 
-        
+            
+
+            {
+
+            }
         }
+
         
     }
 }
