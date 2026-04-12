@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNegocio));
             this.gbInventario = new System.Windows.Forms.GroupBox();
+            this.tboDescripcion = new System.Windows.Forms.TextBox();
+            this.lblDescripción = new System.Windows.Forms.Label();
             this.lblRegistroDos = new System.Windows.Forms.Label();
             this.lblRegistro = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -47,8 +49,6 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblInventario = new System.Windows.Forms.Label();
-            this.lblDescripción = new System.Windows.Forms.Label();
-            this.tboDescripcion = new System.Windows.Forms.TextBox();
             this.gbInventario.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +78,25 @@
             this.gbInventario.TabIndex = 1;
             this.gbInventario.TabStop = false;
             this.gbInventario.Enter += new System.EventHandler(this.gbInventario_Enter);
+            // 
+            // tboDescripcion
+            // 
+            this.tboDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboDescripcion.Location = new System.Drawing.Point(201, 290);
+            this.tboDescripcion.Multiline = true;
+            this.tboDescripcion.Name = "tboDescripcion";
+            this.tboDescripcion.Size = new System.Drawing.Size(120, 74);
+            this.tboDescripcion.TabIndex = 6;
+            // 
+            // lblDescripción
+            // 
+            this.lblDescripción.AutoSize = true;
+            this.lblDescripción.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripción.Location = new System.Drawing.Point(96, 291);
+            this.lblDescripción.Name = "lblDescripción";
+            this.lblDescripción.Size = new System.Drawing.Size(91, 20);
+            this.lblDescripción.TabIndex = 9;
+            this.lblDescripción.Text = "Descripción:";
             // 
             // lblRegistroDos
             // 
@@ -137,6 +156,7 @@
             this.mtbCantidad.Name = "mtbCantidad";
             this.mtbCantidad.Size = new System.Drawing.Size(121, 20);
             this.mtbCantidad.TabIndex = 3;
+            this.mtbCantidad.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbCantidad_MaskInputRejected);
             // 
             // mtbPrecio
             // 
@@ -239,25 +259,6 @@
             this.lblInventario.Size = new System.Drawing.Size(131, 26);
             this.lblInventario.TabIndex = 2;
             this.lblInventario.Text = "Inventario 📝";
-            // 
-            // lblDescripción
-            // 
-            this.lblDescripción.AutoSize = true;
-            this.lblDescripción.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripción.Location = new System.Drawing.Point(96, 291);
-            this.lblDescripción.Name = "lblDescripción";
-            this.lblDescripción.Size = new System.Drawing.Size(91, 20);
-            this.lblDescripción.TabIndex = 9;
-            this.lblDescripción.Text = "Descripción:";
-            // 
-            // tboDescripcion
-            // 
-            this.tboDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboDescripcion.Location = new System.Drawing.Point(201, 290);
-            this.tboDescripcion.Multiline = true;
-            this.tboDescripcion.Name = "tboDescripcion";
-            this.tboDescripcion.Size = new System.Drawing.Size(120, 74);
-            this.tboDescripcion.TabIndex = 6;
             // 
             // frmNegocio
             // 

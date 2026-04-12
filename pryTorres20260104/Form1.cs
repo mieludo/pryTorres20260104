@@ -21,7 +21,7 @@ namespace pryTorres20260104
         string varCategoria = "";
         int varPrecio = 0;
         int varStock = 0;
-        
+
 
 
         public frmNegocio()
@@ -51,39 +51,103 @@ namespace pryTorres20260104
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-           
-            
-            //desde interfaz gráfica
-
-            lblRegistro.Text = tboCodigo.Text + '┆' + tboNombre.Text + '┆' + mtbPrecio.Text + '┆' + mtbCantidad.Text + '┆' + mtbStock.Text + '┆' + cboCategoria.Text + '┆' + tboDescripcion.Text;
-
-            //pasar los datos a variable y luego mostrarlo
-            varCodigo = tboCodigo.Text;
-            varNombre = tboNombre.Text;
-            varDescripcion = tboDescripcion.Text;
-            varCategoria = cboCategoria.Text;
-            //usando el tipo de dato para parsear
-            varPrecio = int.Parse(mtbPrecio.Text);
-            varCantidad = mtbCantidad.Text;
-            //usando .net para convertir
-            varStock = Convert.ToInt32(mtbStock.Text);
-
-            lblRegistroDos.Text = varCodigo + " " + varPrecio.ToString() + " " + varStock.ToString() + " " + varCantidad + " " + varCategoria + " " + varDescripcion;
-
-
-            string datoAgregado = varCodigo + " " + varPrecio.ToString() + " " + varStock.ToString() + " " + varCantidad + " " + varCategoria + " " + varDescripcion;
-
-            MessageBox.Show(datoAgregado);
-            //cuando haga click en confirmar "limpiar" la pantalla para
-            //registrar un nuevo producto
-
-            
-
-            {
-
-            }
+            btnConfirmar_Click(sender, e, tboDescripcion);
         }
 
+        private void btnConfirmar_Click(object sender, EventArgs e, TextBox tboDescripcion)
+        {
+            if (tboCodigo.Text == "")
+            {
+                MessageBox.Show("Ingrese el codigo");
+                tboCodigo.Focus();
+            }
+            else
+            {
+                if (tboNombre.Text == "")
+                {
+                    MessageBox.Show("Ingrese el nombre");
+                    tboNombre.Focus();
+
+                }
+                else
+                {
+                    if (tboDescripcion.Text == "")
+                    {
+                        MessageBox.Show("Ingrese la descripcion");
+                        tboDescripcion.Focus();
+                    }
+                    else
+                    {
+                        if (mtbPrecio.Text == "")
+                        {
+                            MessageBox.Show("Ingrese el precio");
+                            mtbPrecio.Focus();
+                        }
+                        else
+                        {
+                            if (mtbCantidad.Text == "")
+                            {
+                                MessageBox.Show("Ingrese la cantidad deseada");
+                                mtbCantidad.Focus();
+                            }
+                            else
+                            {
+                                if (mtbStock.Text == "")
+                                {
+                                    MessageBox.Show("Ingrese el stock");
+                                    mtbStock.Focus();
+                                }
+                                else
+                                {
+                                    if (cboCategoria.Text == "")
+                                    {
+                                        MessageBox.Show("Ingrese la categoria");
+                                        cboCategoria.Focus();
+                                        //desde interfaz gráfica
+
+                                        lblRegistro.Text = tboCodigo.Text + '┆' + tboNombre.Text + '┆' + mtbPrecio.Text + '┆' + mtbCantidad.Text + '┆' + mtbStock.Text + '┆' + cboCategoria.Text + '┆' + tboDescripcion.Text;
+
+                                        //pasar los datos a variable y luego mostrarlo
+                                        varCodigo = tboCodigo.Text;
+                                        varNombre = tboNombre.Text;
+                                        varDescripcion = tboDescripcion.Text;
+                                        varCategoria = cboCategoria.Text;
+                                        //usando el tipo de dato para parsear
+                                        varPrecio = int.Parse(mtbPrecio.Text);
+                                        varCantidad = mtbCantidad.Text;
+                                        //usando .net para convertir
+                                        varStock = Convert.ToInt32(mtbStock.Text);
+
+                                        lblRegistroDos.Text = varCodigo + " " + varPrecio.ToString() + " " + varStock.ToString() + " " + varCantidad + " " + varCategoria + " " + varDescripcion;
+
+
+                                        string datoAgregado = varCodigo + " " + varPrecio.ToString() + " " + varStock.ToString() + " " + varCantidad + " " + varCategoria + " " + varDescripcion;
+
+                                        MessageBox.Show(datoAgregado);
+                                        //cuando haga click en confirmar "limpiar" la pantalla para
+                                        //registrar un nuevo producto
+
+
+
+                                        {
+
+                                        }
+                                    }
+
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+private void mtbCantidad_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
         
+        }
     }
 }
+
+
+
