@@ -32,7 +32,6 @@
             this.gbInventario = new System.Windows.Forms.GroupBox();
             this.tboDescripcion = new System.Windows.Forms.TextBox();
             this.lblDescripción = new System.Windows.Forms.Label();
-            this.lblRegistroDos = new System.Windows.Forms.Label();
             this.lblRegistro = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.mtbStock = new System.Windows.Forms.MaskedTextBox();
@@ -56,7 +55,6 @@
             // 
             this.gbInventario.Controls.Add(this.tboDescripcion);
             this.gbInventario.Controls.Add(this.lblDescripción);
-            this.gbInventario.Controls.Add(this.lblRegistroDos);
             this.gbInventario.Controls.Add(this.lblRegistro);
             this.gbInventario.Controls.Add(this.btnCancelar);
             this.gbInventario.Controls.Add(this.mtbStock);
@@ -74,7 +72,7 @@
             this.gbInventario.Controls.Add(this.lblCodigo);
             this.gbInventario.Location = new System.Drawing.Point(71, 32);
             this.gbInventario.Name = "gbInventario";
-            this.gbInventario.Size = new System.Drawing.Size(440, 527);
+            this.gbInventario.Size = new System.Drawing.Size(440, 592);
             this.gbInventario.TabIndex = 1;
             this.gbInventario.TabStop = false;
             this.gbInventario.Enter += new System.EventHandler(this.gbInventario_Enter);
@@ -98,32 +96,24 @@
             this.lblDescripción.TabIndex = 9;
             this.lblDescripción.Text = "Descripción:";
             // 
-            // lblRegistroDos
-            // 
-            this.lblRegistroDos.AutoSize = true;
-            this.lblRegistroDos.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistroDos.Location = new System.Drawing.Point(84, 428);
-            this.lblRegistroDos.Name = "lblRegistroDos";
-            this.lblRegistroDos.Size = new System.Drawing.Size(0, 17);
-            this.lblRegistroDos.TabIndex = 8;
-            // 
             // lblRegistro
             // 
             this.lblRegistro.AutoSize = true;
             this.lblRegistro.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistro.Location = new System.Drawing.Point(73, 386);
+            this.lblRegistro.Location = new System.Drawing.Point(153, 383);
             this.lblRegistro.Name = "lblRegistro";
             this.lblRegistro.Size = new System.Drawing.Size(0, 17);
             this.lblRegistro.TabIndex = 3;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(100, 489);
+            this.btnCancelar.Location = new System.Drawing.Point(68, 563);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(119, 23);
             this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // mtbStock
             // 
@@ -175,7 +165,7 @@
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(238, 489);
+            this.btnConfirmar.Location = new System.Drawing.Point(233, 563);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(119, 23);
             this.btnConfirmar.TabIndex = 7;
@@ -265,7 +255,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(583, 581);
+            this.ClientSize = new System.Drawing.Size(583, 643);
             this.Controls.Add(this.lblInventario);
             this.Controls.Add(this.gbInventario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -297,7 +287,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblInventario;
         private System.Windows.Forms.Label lblRegistro;
-        private System.Windows.Forms.Label lblRegistroDos;
         private System.Windows.Forms.Label lblDescripción;
         private System.Windows.Forms.TextBox tboDescripcion;
     }
